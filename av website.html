@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AV Interior</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin: 20px;
+      animation: zoomFade 8s infinite alternate;
+    }
+
+    @keyframes zoomFade {
+      from { opacity: 0.5; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    .container {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .left-boxes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .arrow-box {
+      background: rgba(0,0,0,0.6);
+      padding: 15px;
+      border-radius: 8px;
+      position: relative;
+      animation: slideRight 3s infinite alternate;
+    }
+
+    .arrow-box::after {
+      content: '➤';
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @keyframes slideRight {
+      from { transform: translateX(-10px); }
+      to { transform: translateX(10px); }
+    }
+
+    .right-side {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 20px;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 80px);
+      gap: 5px;
+    }
+
+    .photo-grid img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .info-boxes {
+      display: flex;
+      gap: 15px;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.2);
+      padding: 15px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s;
+    }
+
+    .info-box:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      width: 100%;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .contact {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #ff6f61;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>AV Interior</h1>
+
+  <div class="container">
+    <!-- Left side boxes with arrows -->
+    <div class="left-boxes">
+      <div class="arrow-box">Creative Designs</div>
+      <div class="arrow-box">Modern Interiors</div>
+      <div class="arrow-box">Luxury Spaces</div>
+      <div class="arrow-box">Comfort Living</div>
+    </div>
+
+    <!-- Right side content -->
+    <div class="right-side">
+      <!-- 3x3 photo grid -->
+      <div class="photo-grid">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/37.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/38.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/39.jpg" alt="person">
+        <img src="https://randomuser.me/api/portraits/men/40.jpg" alt="person">
+      </div>
+
+      <!-- Two boxes -->
+      <div class="info-boxes">
+        <div class="info-box">Wood Furniture</div>
+        <div class="info-box">Home Interior</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cupboards gallery -->
+  <div class="gallery">
+    <!-- Repeat cupboard images -->
+    <img src="C:\Users\DELL\Downloads\vani pass pic.jpg" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,2" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,3" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,4" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,5" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,6" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,7" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,8" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,9" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,10" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,11" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,12" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,13" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,14" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,15" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,16" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,17" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,18" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,19" alt="cupboard">
+    <img src="https://source.unsplash.com/400x400/?cupboard,20" alt="cupboard">
+  </div>
+
+  <!-- Contact number -->
+  <div class="contact">📞 +91 8886869611</div>
+
+</body>
+</html>
